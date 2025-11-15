@@ -1,4 +1,4 @@
-import type { Borehole } from "../../types/borehole";
+import type { Borehole } from "../../../../types/borehole";
 import "./LayersTable.css";
 
 interface LayersTableProps {

@@ -1,7 +1,8 @@
 import type { BoreholeData, TabType } from "../../types/borehole";
-import FileSelector from "./FileSelector";
-import MapView from "./MapView";
+import FileSelector from "./components/FileSelector/FileSelector";
+import MapView from "./components/MapView/MapView";
 import BoreholeDetails from "../BoreholeDetails/BoreholeDetails";
+import CrossSection from "../CrossSection/CrossSection";
 import "./DataInput.css";
 
 interface DataInputProps {
@@ -34,11 +35,7 @@ const DataInput: React.FC<DataInputProps> = ({
       case "boreholes":
         return <BoreholeDetails boreholes={boreholeData.boreholes} />;
       case "diagram":
-        return (
-          <div className="map-placeholder">
-            Cross-section diagram will be implemented next
-          </div>
-        );
+        return <CrossSection boreholeData={boreholeData} />;
       default:
         return <MapView boreholes={boreholeData.boreholes} />;
     }
@@ -59,11 +56,6 @@ const DataInput: React.FC<DataInputProps> = ({
           Generate Cross-Section
         </button>
       </div>
-      {/* {boreholeData ? (
-        <MapView boreholes={boreholeData.boreholes} />
-      ) : (
-        <div className="map-placeholder">Import data to view map</div>
-      )} */}
       {renderContent()}
     </div>
   );

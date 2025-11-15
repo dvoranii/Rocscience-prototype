@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { Borehole, InfoTabType } from "../../types/borehole";
-import InfoTable from "./InfoTable";
-import LayersTable from "./LayersTable";
+import InfoTable from "./components/InfoTable/InfoTable";
+import LayersTable from "./components/LayersTable/LayersTable";
 import "./BoreholeDetails.css";
 
 interface BoreholeDetailsProps {

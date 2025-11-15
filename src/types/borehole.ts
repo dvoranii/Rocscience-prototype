@@ -18,6 +18,10 @@ export interface Borehole {
 export interface BoreholeData {
   name: string;
   boreholes: Borehole[];
+  crossSection: {
+    name: string;
+    boreholeOrder: string[];
+  };
 }
 
 export type TabType = "map" | "boreholes" | "diagram";

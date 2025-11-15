@@ -1,5 +1,5 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import type { Borehole } from "../../types/borehole";
+import type { Borehole } from "../../../../types/borehole";
 import "leaflet/dist/leaflet.css";
 import "./MapView.css";
 
