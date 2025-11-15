@@ -1,0 +1,197 @@
+{
+  "name": "boreholes.json",
+  "boreholes": [
+    {
+      "id": "B1",
+      "lat": 57.63821,
+      "lng": -114.023084,
+      "elevation": 280,
+      "layers": [
+        {
+          "id": 1,
+          "material": "Topsoil",
+          "description": "Dark brown organic topsoil",
+          "color": "#8B4513",
+          "topDepth": 0,
+          "bottomDepth": 0.5
+        },
+        {
+          "id": 2,
+          "material": "Fill",
+          "description": "Loose brown silty sand fill material",
+          "color": "#D2691E",
+          "topDepth": 0.5,
+          "bottomDepth": 2
+        },
+        {
+          "id": 3,
+          "material": "Clay",
+          "description": "Stiff to very stiff grey silty clay",
+          "color": "#A0522D",
+          "topDepth": 2,
+          "bottomDepth": 5
+        },
+        {
+          "id": 4,
+          "material": "Sand",
+          "description": "Dense brown fine to medium sand",
+          "color": "#F4A460",
+          "topDepth": 5,
+          "bottomDepth": 10
+        },
+        {
+          "id": 5,
+          "material": "Bedrock",
+          "description": "Grey limestone bedrock",
+          "color": "#696969",
+          "topDepth": 10,
+          "bottomDepth": 15
+        }
+      ]
+    },
+    {
+      "id": "B2",
+      "lat": 57.63885,
+      "lng": -114.02235,
+      "elevation": 275,
+      "layers": [
+        {
+          "id": 1,
+          "material": "Topsoil",
+          "description": "Dark brown organic topsoil",
+          "color": "#8B4513",
+          "topDepth": 0,
+          "bottomDepth": 0.4
+        },
+        {
+          "id": 2,
+          "material": "Fill",
+          "description": "Compact brown clayey fill",
+          "color": "#D2691E",
+          "topDepth": 0.4,
+          "bottomDepth": 1.5
+        },
+        {
+          "id": 3,
+          "material": "Clay",
+          "description": "Very stiff grey clay with sand lenses",
+          "color": "#A0522D",
+          "topDepth": 1.5,
+          "bottomDepth": 4
+        },
+        {
+          "id": 4,
+          "material": "Sand",
+          "description": "Medium dense brown silty sand",
+          "color": "#F4A460",
+          "topDepth": 4,
+          "bottomDepth": 8
+        },
+        {
+          "id": 5,
+          "material": "Bedrock",
+          "description": "Fractured limestone bedrock",
+          "color": "#696969",
+          "topDepth": 8,
+          "bottomDepth": 12
+        }
+      ]
+    },
+    {
+      "id": "B3",
+      "lat": 57.63758,
+      "lng": -114.02412,
+      "elevation": 285,
+      "layers": [
+        {
+          "id": 1,
+          "material": "Topsoil",
+          "description": "Dark brown organic topsoil",
+          "color": "#8B4513",
+          "topDepth": 0,
+          "bottomDepth": 0.6
+        },
+        {
+          "id": 2,
+          "material": "Fill",
+          "description": "Loose sandy fill with gravel",
+          "color": "#D2691E",
+          "topDepth": 0.6,
+          "bottomDepth": 3
+        },
+        {
+          "id": 3,
+          "material": "Clay",
+          "description": "Firm brown organic clay",
+          "color": "#A0522D",
+          "topDepth": 3,
+          "bottomDepth": 7
+        },
+        {
+          "id": 4,
+          "material": "Sand",
+          "description": "Loose to medium dense fine sand",
+          "color": "#F4A460",
+          "topDepth": 7,
+          "bottomDepth": 11
+        },
+        {
+          "id": 5,
+          "material": "Bedrock",
+          "description": "Weathered limestone bedrock",
+          "color": "#696969",
+          "topDepth": 11,
+          "bottomDepth": 16
+        }
+      ]
+    },
+    {
+      "id": "B4",
+      "lat": 57.63912,
+      "lng": -114.02501,
+      "elevation": 270,
+      "layers": [
+        {
+          "id": 1,
+          "material": "Topsoil",
+          "description": "Dark brown organic topsoil",
+          "color": "#8B4513",
+          "topDepth": 0,
+          "bottomDepth": 0.3
+        },
+        {
+          "id": 2,
+          "material": "Fill",
+          "description": "Soft organic fill with debris",
+          "color": "#D2691E",
+          "topDepth": 0.3,
+          "bottomDepth": 2.5
+        },
+        {
+          "id": 3,
+          "material": "Clay",
+          "description": "Soft to firm blue-grey clay",
+          "color": "#A0522D",
+          "topDepth": 2.5,
+          "bottomDepth": 6
+        },
+        {
+          "id": 4,
+          "material": "Sand",
+          "description": "Very loose saturated sand",
+          "color": "#F4A460",
+          "topDepth": 6,
+          "bottomDepth": 9
+        },
+        {
+          "id": 5,
+          "material": "Bedrock",
+          "description": "Sound limestone bedrock",
+          "color": "#696969",
+          "topDepth": 9,
+          "bottomDepth": 14
+        }
+      ]
+    }
+  ]
+}

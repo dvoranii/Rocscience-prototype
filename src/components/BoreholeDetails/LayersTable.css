@@ -1,0 +1,58 @@
+.layers-table {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.layers-table .table-header {
+  display: grid;
+  grid-template-columns: 0.5fr 1.2fr 0.8fr 0.8fr 0.8fr 2fr;
+  background: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.layers-table .table-row {
+  display: grid;
+  grid-template-columns: 0.5fr 1.2fr 0.8fr 0.8fr 0.8fr 2fr;
+  border-bottom: 1px solid #e9ecef;
+  transition: background-color 0.2s ease;
+}
+
+.layers-table .table-row:hover {
+  background: #f8f9ff;
+}
+
+.material-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.color-swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  flex-shrink: 0;
+}
+
+.depth-cell {
+  font-family: monospace;
+  font-size: 13px;
+  justify-content: center;
+}
+
+.layer-number {
+  justify-content: center;
+  font-weight: 600;
+  color: #495057;
+}
+
+.description-cell {
+  color: #6c757d;
+  font-size: 13px;
+  line-height: 1.4;
+}

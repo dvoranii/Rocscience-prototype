@@ -1,0 +1,103 @@
+.borehole-details {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: white;
+}
+
+.borehole-sidebar {
+  width: 200px;
+  background: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+  padding: 16px;
+}
+
+.borehole-sidebar h3 {
+  margin: 0 0 16px 0;
+  color: #495057;
+  font-size: 16px;
+}
+
+.borehole-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.borehole-item {
+  padding: 12px 16px;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  font-size: 14px;
+}
+
+.borehole-item:hover {
+  border-color: #007bff;
+  background: #f8f9ff;
+}
+
+.borehole-item.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.borehole-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #dee2e6;
+  background: white;
+}
+
+.content-header h2 {
+  margin: 0;
+  color: #212529;
+  font-size: 24px;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.tab-button {
+  padding: 8px 16px;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.tab-button:hover {
+  background: #e9ecef;
+}
+
+.tab-button.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.no-selection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  font-size: 16px;
+}
