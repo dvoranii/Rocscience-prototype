@@ -31,7 +31,12 @@ const DataInput: React.FC<DataInputProps> = ({
 
     switch (activeTab) {
       case "map":
-        return <MapView boreholes={boreholeData.boreholes} />;
+        return (
+          <MapView
+            boreholes={boreholeData.boreholes}
+            crossSectionLine={boreholeData.crossSection.line}
+          />
+        );
       case "boreholes":
         return <BoreholeDetails boreholes={boreholeData.boreholes} />;
       case "diagram":

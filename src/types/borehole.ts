@@ -21,6 +21,10 @@ export interface BoreholeData {
   crossSection: {
     name: string;
     boreholeOrder: string[];
+    line?: {
+      start: { lat: number; lng: number };
+      end: { lat: number; lng: number };
+    };
   };
 }
 

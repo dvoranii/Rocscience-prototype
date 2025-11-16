@@ -29,8 +29,23 @@ const CrossSection: React.FC<CrossSectionProps> = ({ boreholeData }) => {
 
   const getBoreholeX = (index: number): number => {
     const numBoreholes = boreholeData.crossSection.boreholeOrder.length;
-    const spacing = (CANVAS_WIDTH - 2 * MARGIN) / (numBoreholes - 1);
-    return MARGIN + index * spacing;
+
+    const segmentWidth = (CANVAS_WIDTH - 2 * MARGIN) / 3;
+
+    switch (index) {
+      case 0:
+        return MARGIN;
+      case 1:
+        return MARGIN + segmentWidth * 0.8;
+      case 2:
+        return MARGIN + segmentWidth * 2.2;
+      case 3:
+        return MARGIN + segmentWidth * 3;
+      default:
+        return (
+          MARGIN + (index * (CANVAS_WIDTH - 2 * MARGIN)) / (numBoreholes - 1)
+        );
+    }
   };
 
   const getDepthY = (depth: number): number => {
@@ -87,7 +102,7 @@ const CrossSection: React.FC<CrossSectionProps> = ({ boreholeData }) => {
       ctx.fillStyle = "#666";
       ctx.font = "12px Arial";
       ctx.textAlign = "right";
-      ctx.fillText(`${depth}m`, MARGIN - 15, y + 4);
+      ctx.fillText(`${depth}m`, MARGIN - 25, y + 4);
     }
 
     ctx.setLineDash([]);
@@ -97,10 +112,8 @@ const CrossSection: React.FC<CrossSectionProps> = ({ boreholeData }) => {
     ctx: CanvasRenderingContext2D,
     data: BoreholeData
   ) => {
-    // Clear canvas
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
-    // Draw background
     ctx.fillStyle = "#f8f9fa";
     ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 

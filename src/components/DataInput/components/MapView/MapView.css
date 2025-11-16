@@ -45,3 +45,34 @@
   border: 1px solid #ccc;
   flex-shrink: 0;
 }
+
+.cross-section-tooltip {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #dc3545;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cross-section-tooltip::before {
+  border-top-color: #dc3545 !important;
+}
+
+.tooltip-content {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #212529;
+  text-align: center;
+}
+
+.tooltip-content strong {
+  color: #dc3545;
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.tooltip-content div {
+  margin: 2px 0;
+  font-family: monospace;
+  font-size: 11px;
+}

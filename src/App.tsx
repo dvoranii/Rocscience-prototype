@@ -4,10 +4,15 @@ import Navigation from "./components/Navigation/Navigation";
 import DataInput from "./components/DataInput/DataInput";
 import "./App.css";
 import sampleData from "./data/boreholes.json";
+import { useLocalStorage } from "./hooks/useLocalStorage";
 
 function App() {
   const [selectedFile, setSelectedFile] = useState<string>("");
-  const [boreholeData, setBoreholeData] = useState<BoreholeData | null>(null);
+  // const [boreholeData, setBoreholeData] = useState<BoreholeData | null>(null);
+  const [boreholeData, setBoreholeData] = useLocalStorage<BoreholeData | null>(
+    "borehole-data",
+    null
+  );
   const [activeTab, setActiveTab] = useState<TabType>("map");
   const [isCrossSectionGenerated, setIsCrossSectionGenerated] = useState(false);
 

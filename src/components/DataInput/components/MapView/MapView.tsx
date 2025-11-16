@@ -1,14 +1,20 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  Polyline,
+} from "react-leaflet";
 import type { Borehole } from "../../../../types/borehole";
 import "leaflet/dist/leaflet.css";
 import "./MapView.css";
 
-// Fix for default markers in react-leaflet
 import L from "leaflet";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
+import MapBounds from "./MapBounds/MapBounds";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 delete L.Icon.Default.prototype._getIconUrl;
@@ -20,19 +26,28 @@ L.Icon.Default.mergeOptions({
 
 interface MapViewProps {
   boreholes: Borehole[];
+  crossSectionLine?: {
+    start: { lat: number; lng: number };
+    end: { lat: number; lng: number };
+  };
 }
 
-const MapView: React.FC<MapViewProps> = ({ boreholes }) => {
-  // Calculate center of all boreholes
+const MapView: React.FC<MapViewProps> = ({ boreholes, crossSectionLine }) => {
   const centerLat =
     boreholes.reduce((sum, bh) => sum + bh.lat, 0) / boreholes.length;
   const centerLng =
     boreholes.reduce((sum, bh) => sum + bh.lng, 0) / boreholes.length;
 
-  // Calculate max depth for each borehole
   const getMaxDepth = (borehole: Borehole) => {
     return Math.max(...borehole.layers.map((layer) => layer.bottomDepth));
   };
+
+  const lineCoordinates = crossSectionLine
+    ? ([
+        [crossSectionLine.start.lat, crossSectionLine.start.lng],
+        [crossSectionLine.end.lat, crossSectionLine.end.lng],
+      ] as [number, number][])
+    : [];
 
   return (
     <div className="map-view">
@@ -41,10 +56,21 @@ const MapView: React.FC<MapViewProps> = ({ boreholes }) => {
         zoom={15}
         style={{ height: "100%", width: "100%" }}
       >
+        <MapBounds boreholes={boreholes} crossSectionLine={crossSectionLine} />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+
+        {crossSectionLine && (
+          <Polyline
+            positions={lineCoordinates}
+            color="red"
+            weight={3}
+            opacity={0.7}
+            dashArray="10, 10"
+          />
+        )}
 
         {boreholes.map((borehole) => (
           <Marker key={borehole.id} position={[borehole.lat, borehole.lng]}>

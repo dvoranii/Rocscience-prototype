@@ -3,8 +3,8 @@
   "boreholes": [
     {
       "id": "B1",
-      "lat": 57.63821,
-      "lng": -114.023084,
+      "lat": 57.63831,
+      "lng": -114.023284,
       "elevation": 280,
       "layers": [
         {
@@ -51,8 +51,8 @@
     },
     {
       "id": "B2",
-      "lat": 57.63885,
-      "lng": -114.02235,
+      "lat": 57.63821,
+      "lng": -114.022884,
       "elevation": 275,
       "layers": [
         {
@@ -77,14 +77,14 @@
           "description": "Very stiff grey clay with sand lenses",
           "color": "#A0522D",
           "topDepth": 1.5,
-          "bottomDepth": 4
+          "bottomDepth": 6
         },
         {
           "id": 4,
           "material": "Sand",
           "description": "Medium dense brown silty sand",
           "color": "#F4A460",
-          "topDepth": 4,
+          "topDepth": 6,
           "bottomDepth": 8
         },
         {
@@ -99,8 +99,8 @@
     },
     {
       "id": "B3",
-      "lat": 57.63758,
-      "lng": -114.02412,
+      "lat": 57.63841,
+      "lng": -114.022484,
       "elevation": 285,
       "layers": [
         {
@@ -147,8 +147,8 @@
     },
     {
       "id": "B4",
-      "lat": 57.63912,
-      "lng": -114.02501,
+      "lat": 57.63831,
+      "lng": -114.022084,
       "elevation": 270,
       "layers": [
         {
@@ -196,6 +196,10 @@
   ],
   "crossSection": {
     "name": "Section A-A'",
-    "boreholeOrder": ["B1", "B2", "B3", "B4"]
+    "boreholeOrder": ["B1", "B2", "B3", "B4"],
+    "line": {
+      "start": { "lat": 57.63811, "lng": -114.023584 },
+      "end": { "lat": 57.63851, "lng": -114.021584 }
+    }
   }
 }
