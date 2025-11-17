@@ -55,7 +55,7 @@
 
 .content-header {
   display: flex;
-  justify-content: space-between;
+  gap: 1.2rem;
   align-items: center;
   padding: 20px 24px;
   border-bottom: 1px solid #dee2e6;
@@ -74,10 +74,10 @@
 }
 
 .tab-button {
-  padding: 8px 16px;
+  padding: 6px 12px;
   background: #f8f9fa;
   border: 1px solid #dee2e6;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
   transition: all 0.2s ease;
